@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tambahkan link CSS Bootstrap di bawah ini -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      width: 720px;
+      border: 1px solid white;
+      border-radius: 5px;
+      margin: 0 auto;
+      padding: 16px 0 16px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      background-image: url('https://wallpaperaccess.com/full/8499203.png');
+      color: white;
+    }
+
+    .center-text {
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 24px;
+      /* Ubah ukuran font sesuai kebutuhan */
+      font-style: unset;
+      font-weight: bold;
+    }
+
+    label {
+      font-style: inherit;
+      font-weight: 500;
+    }
+
+    p {
+      font-style: inherit;
+      font-weight: 500;
+    }
+
+    textarea {
+      font-style: italic;
+    }
+
+    idn {
+      display: block;
+      margin-top: 35px;
+      text-align: center;
+      font-style: inherit;
+      font-weight: 500;
+    }
+
+    btn {
+      text-align: center;
+    }
+
+    .custom-button {
+    background-color: green;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .custom-button:hover {
+    background-color: black;
+  }
+
+  </style>
+  <title>DOM Javascript</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header center-text">
+      <h3>Formulir</h3>
+      <h3>Pendaftaran Driver</h3>
+    </div>
+    <form action="container">
+      <div class="container">
+        <div class="header center-text">
+          <label for="nama">Nama</label><br>
+          <input type="text" placeholder="Nama anda" id="nama" class="center-text"><br><br>
+          <label for="tanggal">Tanggal Lahir</label><br>
+          <input type="date" id="tanggal" name="tanggal" class="center-text" min="1958-01-01" max="2005-12-31"><br><br>
+          <label for="driver">Pilih Driver</label><br>
+          <select id="driver">
+            <option value="Go Ride">Go Ride</option>
+            <option value="Go Food">Go Food</option>
+            <option value="Go Car">Go Car</option>
+            <option value="Go Send">Go Send</option>
+            <!-- Tambahkan opsi yang lain di sini -->
+          </select><br>
+
+          <idn>
+            <label for="identitas">Pilih Identitas</label><br>
+            <div class="form-check">
+              <input class="form-check-input center-text" type="radio" name="identitas" id="ktp" value="Kartu Tanda Penduduk">
+              <label class="form-check-label" for="ktp">Kartu Tanda Penduduk</label> <br>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input center-text" type="radio" name="identitas" id="sim" value="Surat Izin Mengemudi">
+              <label class="form-check-label" for="sim">Surat Izin Mengemudi</label> <br>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input center-text" type="radio" name="identitas" id="kk" value="Kartu Keluarga">
+              <label class="form-check-label" for="kk">Kartu Keluarga</label> <br>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input center-text" type="radio" name="identitas" id="kp" value="Kartu Pelajar">
+              <label class="form-check-label" for="kp">Kartu Pelajar</label><br><br>
+            </div><br>
+
+            <p>
+              Lampirkan bukti: <input type="file" name="foto" class="center-text">
+            </p>
+
+            <label for="nopol">Nomor Polisi Kendaraan</label><br>
+            <input type="text" placeholder="AB XXXX XY" id="nopol" class="center-text"><br><br>
+
+          </idn>
+
+          <label for="alamat">Alamat</label><br>
+          <textarea placeholder="Tulis alamat tinggal secara lengkap" name="alamat" id="alamat" cols="30" rows="5" class="center-text"></textarea><br><br>
+
+
+          <button type="submit" onclick="kirimData()" class="btn btn-primary btn-lg custom-button">Kirim</button>
+
+    </form>
+    </div>
+
+    <!-- Tambahkan script Bootstrap di bawah ini -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
